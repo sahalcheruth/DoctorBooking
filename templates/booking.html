@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title%}
+
+booking
+{% endblock %}
+
+<link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/pulse/bootstrap.min.css">
+
+
+{% block content%}
+
+<div>
+<h1 class="text-center" style="padding-top: 2%; color: rgb(6, 122, 85); text-shadow: 2px 2px 4px rgba(183, 120, 120, 0.5);">Make An Appoinment</h1>
+<hr>
+<div class="container w-50 text-center my-5 ">
+ 
+<div class="container" style="width: 400px; background-color: rgba(7, 161, 208, 0.94);box-shadow: 10px 10px 8px 8px rgba(0, 0, 0, 0.2);">    
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form |crispy }}
+
+    <button type="submit" style="margin-bottom: 20px; background-color: rgb(30, 157, 85); color: rgb(250, 246, 246);
+    border-radius: 25%; border: none; transition: background-color 0.3s, transform 0.13s;" onmouseover=
+    "this.style.backgroundColor='rgb(44, 179, 92)'; this.style.transform='scale(1.05)';" onmouseout=
+    "this.style.backgroundColor='rgb(30, 157, 85)'; this.style.transform='scale(1)';">
+    REGISTER
+</button>
+
+</form>
+</div>
+</div>
+</div>
+
+<div class="container" style="padding-bottom: 125px; width: 1000px;">
+    
+    <br>
+    <p style="color: gray;"> Welcome to City Hospital, a state-of-the-art medical facility serving the community with dedication and compassion. Established with the vision to provide exceptional healthcare services, we are committed to promoting the health and well-being of our patients through comprehensive care and advanced treatment options.
+        
+        At City Hospital, we understand that healthcare is personal. That's why we focus on delivering compassionate, patient-centered care while ensuring that you feel informed and supported throughout your journey with us. Whether you are visiting for a routine check-up or seeking specialized treatment, you can trust our team of experienced healthcare professionals to deliver the best possible care.
+        
+        Our Mission
+        Our mission is to offer high-quality, affordable healthcare services that meet the unique needs of our diverse community. We aim to improve the quality of life of our patients by providing access to advanced medical technology, a wide range of specialties, and compassionate care.</p>
+</div>
+
+
+
+<div>
+    <h3 style="font-family: 'Times New Roman', Times, serif; padding-left: 30px;">City Hospital<hr></h3>
+    
+    <h6 style="letter-spacing: 1.5PX; padding-left: 300PX; padding-top: 50PX; font-family: 'Times New Roman', Times, serif;">QUICK LINKS</h6>
+    <div style=" padding-left: 310PX;color: gray; font-family: 'Times New Roman', Times, serif; text-decoration: none;"><a style="text-decoration: none;color: gray;
+    " href="{% url 'about'%}"><p>About</p></a>
+    <a style="text-decoration: none;color: gray;
+    " href="{% url 'booking'%}"><p>Booking</p></a>
+    <a style="text-decoration: none;color: gray;
+    " href="{% url 'doctors'%}"><p>Doctors</p></a>
+    <a style="text-decoration: none;color: gray;
+    " href="{% url 'department'%}"><p>Departments</p></a>
+    <a style="text-decoration: none;color: gray;
+    " href="{% url 'contact'%}"><p>Contact Us</p></a>
+
+<div style="padding-left: 350px;margin-top: -240px;">
+  <h5 style="color: black; font-size: 16PX;">ABOUT US</h5>
+  <div style="padding-left: 10px; padding-right: 170px;">
+  <p>~ Mission & Vision: Highlight the hospital's commitment to providing high-quality, compassionate care and advancing healthcare in the community.</p>
+  <p>~ History: A brief history of the hospital, its founding, and milestones.</p>
+  <p>~ Emergency Care: 24/7 emergency department with a highly trained staff and state-of-the-art medical equipment.</p>
+  <p>~ Maternity & Women's Health: Expert obstetrics and gynecology services, prenatal care, and birthing options.</p>
+</div>
+</div>
+    </div>
+    
+    
+    <div class="container" style="padding-bottom: 200px; padding-left: 600px; padding-top: 20px;" > 
+      <img src="https://seekvectors.com/files/download/a9c0d3e9f66ecc43eb9103202e2a1347.jpg" width="16px">
+      <img src="https://cdn3.iconfinder.com/data/icons/social-network-30/512/social-06-512.png" width="20px">
+      <img src="https://static.vecteezy.com/system/resources/previews/018/910/719/non_2x/facebook-logo-facebook-icon-free-free-vector.jpg" width="23px">
+    </div>
+    
+    
+{% endblock %}
